@@ -1,0 +1,17 @@
+<div>
+    <form [formGroup]="addDesignationForm">
+        <div>
+            <label>Designation Name</label>
+            <input formControlName="DesignationName" placeholder="designation name">
+        </div>
+        <div>
+            <label>Role Name</label>
+            <input formControlName="RoleName" placeholder="role name">
+        </div>
+        <div>
+            <label>Department Name</label>
+            <input formControlName="DepartmentName" placeholder="department name">
+        </div>
+        <button type="submit" (click)="addDesignation()">Save</button>
+    </form>
+</div>

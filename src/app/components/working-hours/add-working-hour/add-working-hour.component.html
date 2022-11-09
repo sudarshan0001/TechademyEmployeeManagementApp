@@ -1,0 +1,22 @@
+<div>
+    <form [formGroup]="addWorkingHour">
+        <div>
+            <label>Year-Month(eg:Dec-20XX)</label>
+            <input formControlName="YearMonth" type="text">
+        </div>
+        <div>
+            <label>Company Hours</label>
+            <input formControlName="CompanyHours" type="number">
+        </div>
+        <div>
+            <label>Hours Worked</label>
+            <input formControlName="HoursWorked" type="number">
+        </div>
+        <div>
+            <label>Employee ID</label>
+            <input formControlName="EmployeeId" type="number">
+        </div>
+
+        <button (click)="addNewWorkingHour()">Save</button>
+    </form>
+</div>

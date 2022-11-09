@@ -1,0 +1,9 @@
+<div>
+    <form [formGroup]="addPaymentForm">
+        <div>
+            <label>Payment Rule</label>
+            <input formControlName="PaymentRule" type="text">
+        </div>
+        <button (click)="addRule()">Save</button>
+    </form>
+</div>

@@ -1,0 +1,22 @@
+<div>
+    <form [formGroup]="leaveRequestForm">
+        <div>
+            <label>Leave Type</label>
+            <input formControlName="LeaveType" placeholder="Leave type">
+        </div>
+        <div>
+            <label>Total Days</label>
+            <input formControlName="LeaveDays" placeholder="total days ">
+        </div>
+        <div>
+            <label>Start Date</label>
+            <input formControlName="FromDate" placeholder="date" type="date">
+        </div>
+        <div>
+            <label>Reason</label>
+            <input formControlName="LeaveReason" placeholder="Reason" type="text">
+        </div>
+
+        <button (click)="onRequest()" type="submit">Submit Request</button>
+    </form>
+</div>

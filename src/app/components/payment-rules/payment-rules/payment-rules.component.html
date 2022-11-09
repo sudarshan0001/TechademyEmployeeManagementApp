@@ -1,0 +1,23 @@
+<!-- <app-navbar></app-navbar> -->
+<div>
+    <table class="table" *ngIf="payments && payments.length>0">
+        <thead>
+            <tr>
+                <th>Sr.No</th>
+                <th>Payment Rules</th>
+                <th>   </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let employee of payments;let i=index">
+                <td>{{i+1}}</td>
+               <td>{{employee.paymentRule}}</td>
+                <!-- <td><a [routerLink]="['/employees','edit',employee.employeeId]">View</a></td> -->
+                <td><button (click)="deleteRule(employee.paymentId)">Delete</button>||<button [routerLink]="['/payment-rules','edit',employee.paymentId]">Update</button></td>
+            </tr>
+        </tbody>
+    </table>
+    <p *ngIf="!payments || payments.length<=0">no Records Found</p>
+
+    <button routerLink="add-new-rule">Add New Payment Rule</button>
+</div>

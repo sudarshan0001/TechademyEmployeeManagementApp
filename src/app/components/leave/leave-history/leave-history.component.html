@@ -1,0 +1,31 @@
+<!-- <app-navbar></app-navbar> -->
+<div>
+    <table class="table" *ngIf="leaves && leaves.length>0">
+        <thead>
+            <tr>
+                <th>Sr.No</th>
+                <th>Leave Type</th>
+                <th>Total Days</th>
+                <th>Start Date</th>
+                <th>Reason</th>
+                <th>Status</th>
+                <th>   </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let leave of leaves;let i=index">
+                <td>{{i+1}}</td>
+               <td>{{leave.leaveType}}</td>
+                <td>{{leave.leaveDays}}</td>
+                <td>{{leave.fromDate}}</td>
+                <td>{{leave.leaveReason}}</td>
+                <td>{{leave.leaveStatus}}</td>
+                <!-- <td><a [routerLink]="['/leaves','edit',employee.employeeId]">View</a></td> -->
+                <td><button (click)="deleteLeave(leave.leaveId)">Delete</button>||<button>Update</button></td>
+            </tr>
+        </tbody>
+    </table>
+    <p *ngIf="!leaves || leaves.length<=0">no leave history Found</p>
+
+    <button (click)="requestLeave()">Request for Leave</button>
+</div>

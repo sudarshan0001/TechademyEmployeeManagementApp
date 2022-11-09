@@ -1,0 +1,27 @@
+<!-- <app-navbar></app-navbar> -->
+<div>
+    <table class="table" *ngIf="designations && designations.length>0">
+        <thead>
+            <tr>
+                <th>Sr.No</th>
+                <th>Designation Name</th>
+                <th>Role Name</th>
+                <th>Department Name</th>
+                <th>   </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let designation of designations;let i=index">
+                <td>{{i+1}}</td>
+               <td>{{designation.designationName}}</td>
+                <td>{{designation.roleName}}</td>
+                <td>{{designation.departmentName}}</td>
+                <!-- <td><a [routerLink]="['/designations','edit',employee.employeeId]">View</a></td> -->
+                <td><button (click)="deleteDesignation(designation.designationId)" >Delete</button>||<button>Update</button></td>
+            </tr>
+        </tbody>
+    </table>
+    <p *ngIf="!designations || designations.length<=0">no employees Found</p>
+
+    <button routerLink="add-new-designation">Add New Designation</button>
+</div>

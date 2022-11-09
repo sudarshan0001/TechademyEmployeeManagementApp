@@ -1,0 +1,44 @@
+<p>add-employee works!</p>
+<div>
+    <form [formGroup]="addEmployeeForm">
+        <div>
+            <label>Name</label>
+            <input placeholder="Name" formControlName="EmployeeName">
+        </div>
+        <div>
+            <label>Email</label>
+            <input placeholder="Email" formControlName="EmployeeEmail">
+        </div>
+        <div>
+            <label>Gender</label>
+            <input placeholder="Gender" formControlName="EmployeeGender">
+        </div>
+        <div>
+            <label>DOB</label>
+            <input placeholder="Date of Birth(YYYY-MM-DD)" formControlName="EmployeeDOB">
+        </div>
+        <div>
+            <label>Contact</label>
+            <input placeholder="Contact" formControlName="EmployeeContact">
+        </div>
+        <div>
+            <label>Address</label>
+            <input placeholder="Address"  formControlName="EmployeeAddress">
+        </div>
+        <div>
+            <label>Designation</label>
+            <input placeholder="Designation" formControlName="EmployeeDesignation">
+        </div>
+        <div>
+            <label>Image</label>
+            <input placeholder="Image" formControlName="EmployeeImage">
+        </div>
+        <div>
+            <label>Password</label>
+            <input placeholder="Password" formControlName="Password" type="password">
+        </div>
+
+        <button (click)="onAddEmp()" type="submit">Add</button>
+
+    </form>
+</div>

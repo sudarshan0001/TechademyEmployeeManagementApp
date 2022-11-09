@@ -1,0 +1,29 @@
+<div>
+    <table class="table" *ngIf="hours && hours.length>0">
+        <thead>
+            <tr>
+                <th>Sr.No</th>
+                <th>Year-Month</th>
+                <th>Company Hours</th>
+                <th>Hours Worked</th>
+                <th>Employee Id</th>
+                <th>   </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let hour of hours;let i=index">
+                <td>{{i+1}}</td>
+               <td>{{hour.yearMonth}}</td>
+               <td>{{hour.companyHours}}</td>
+               <td>{{hour.hoursWorked}}</td>
+               <td>{{hour.employeeID}}</td>
+                <!-- <td><a [routerLink]="['/employees','edit',employee.employeeId]">View</a></td> -->
+                <td><button >Update</button></td>
+            </tr>
+        </tbody>
+    </table>
+    <p *ngIf="!hours || hours.length<=0">no Records Found</p>
+
+    <button routerLink="add-new-hour">Add New Working Hour</button>
+</div>
+

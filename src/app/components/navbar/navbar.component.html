@@ -1,0 +1,14 @@
+<!-- <app-navbar></app-navbar> -->
+<div class="navbar flex-d">
+    <span class="nav-brand">Techademy</span>
+    <div *ngIf="showOptions">
+        <a href="http://localhost:4200/home">Employee Details</a>
+        <a href="http://localhost:4200/designation">Designation Details</a>
+        <a href="http://localhost:4200/leave-request">Request Leave</a>
+        <a href="http://localhost:4200/leave-history">Leave History</a>
+        <a href="http://localhost:4200/payment-rules">Payment  Rules</a>
+        <a href="http://localhost:4200/working-hours">working hours</a>
+        <button (click)="logout()">logout</button>
+    </div>
+
+</div>

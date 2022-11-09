@@ -1,0 +1,37 @@
+<!-- <app-navbar></app-navbar> -->
+<div>
+    <table class="table" *ngIf="employees && employees.length>0">
+        <thead>
+            <tr>
+                <th>Sr.No</th>
+                <th>Employee ID</th>
+                <th>Employee Name</th>
+                <th>Employee Email-Id</th>
+                <th>Gender</th>
+                <th>Address</th>
+                <th>DOB</th>
+                <th>Phone</th>
+                <th>Designation</th>
+                <th>   </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let employee of employees;let i=index">
+                <td>{{i+1}}</td>
+               <td>{{employee.employeeId}}</td>
+                <td>{{employee.employeeName}}</td>
+                <td>{{employee.employeeEmail}}</td>
+                <td>{{employee.employeeGender}}</td>
+                <td>{{employee.employeeAddress}}</td>
+                <td>{{employee.employeeDOB}}</td>
+                <td>{{employee.employeeContact}}</td>
+                <td>{{employee.employeeDesignation}}</td>
+                <!-- <td><a [routerLink]="['/employees','edit',employee.employeeId]">View</a></td> -->
+                <td><button (click)="deleteEmployee(employee.employeeId)">Delete</button>||<button>Update</button></td>
+            </tr>
+        </tbody>
+    </table>
+    <p *ngIf="!employees || employees.length<=0">no employees Found</p>
+
+    <button routerLink="add-new-employee">Add New Employee</button>
+</div>

@@ -15,7 +15,7 @@ response : string = '';
 
   ngOnInit(): void {
     this.addEmployeeForm = this.fb.group({
-      'EmployeeName' :['DD', Validators.required],
+      'EmployeeName' :['', Validators.required],
       'EmployeeEmail':['', Validators.required],
       'EmployeeGender':['',Validators.required],
       'EmployeeDOB':['',Validators.required],
